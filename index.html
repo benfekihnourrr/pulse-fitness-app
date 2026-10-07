@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PULSE | Fitness & Gym</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#" data-view="home"><span class="mark">P</span><span>PULSE<small>FITNESS CLUB</small></span></a>
+  <nav><button class="navlink active" data-view="home">Train</button><button class="navlink" data-view="classes">Classes</button><button class="navlink" data-view="progress">My Progress</button><button class="navlink" data-view="admin">Staff</button></nav>
+  <button class="btn lime" id="joinBtn">START TRAINING</button>
+</header>
+
+<main>
+<section id="home" class="view active">
+  <section class="hero">
+    <div class="shade"></div>
+    <div class="hero-copy"><span class="kicker">NO EXCUSES. JUST PROGRESS.</span><h1>BUILD YOUR<br><em>STRONGEST SELF.</em></h1><p>Personalized training, expert coaches and measurable progress—all in one fitness experience.</p><div class="hero-actions"><button class="btn lime" id="exploreBtn">EXPLORE WORKOUTS</button><button class="btn ghost" data-go="classes">VIEW CLASSES</button></div></div>
+    <div class="hero-stat"><b>24/7</b><span>ACCESS</span><b>18+</b><span>COACHES</span><b>40+</b><span>WEEKLY CLASSES</span></div>
+  </section>
+  <section class="section" id="workoutSection"><div class="head"><div><span class="kicker dark">TRAIN YOUR WAY</span><h2>Workout Programs</h2></div><p>Choose a goal, follow a structured plan and track every session.</p></div><div class="chips" id="workoutFilters"></div><div class="grid" id="workoutGrid"></div></section>
+  <section class="metrics"><div><strong>1,800+</strong><span>ACTIVE MEMBERS</span></div><div><strong>4.9★</strong><span>MEMBER RATING</span></div><div><strong>92%</strong><span>GOAL COMPLETION</span></div><div><strong>24/7</strong><span>GYM ACCESS</span></div></section>
+</section>
+
+<section id="classes" class="view section">
+  <span class="kicker dark">MOVE TOGETHER</span><h2>Group Classes</h2><p class="lead">Reserve your spot in today's studio sessions.</p>
+  <div class="class-grid" id="classGrid"></div>
+</section>
+
+<section id="progress" class="view section">
+  <span class="kicker dark">YOUR JOURNEY</span><h2>My Progress</h2>
+  <div class="progress-kpis"><article><span>Workouts completed</span><strong id="doneCount">0</strong></article><article><span>Minutes trained</span><strong id="minutesCount">0</strong></article><article><span>Classes booked</span><strong id="bookedCount">0</strong></article><article><span>Current streak</span><strong id="streakCount">0 days</strong></article></div>
+  <div class="progress-panel"><h3>Recent Activity</h3><div id="activityList"></div></div>
+</section>
+
+<section id="admin" class="view section">
+  <div class="login" id="loginBox"><span class="kicker dark">TEAM ACCESS</span><h2>Staff Portal</h2><p>Manage members, classes and club activity.</p><form id="loginForm"><input id="email" type="email" value="admin@pulsefit.com" required><input id="password" type="password" value="admin123" required><button class="btn darkbtn">SIGN IN</button></form><small>Demo: admin@pulsefit.com / admin123</small></div>
+  <div id="dashboard" hidden><div class="dashhead"><div><span class="kicker dark">CLUB MANAGEMENT</span><h2>Fitness Dashboard</h2></div><button class="btn outline" id="logout">LOG OUT</button></div><div class="progress-kpis"><article><span>Members</span><strong>1,842</strong></article><article><span>Today's check-ins</span><strong id="checkins">126</strong></article><article><span>Class bookings</span><strong id="adminBookings">0</strong></article><article><span>Active programs</span><strong>6</strong></article></div><div class="progress-panel"><div class="panelhead"><h3>Today's Classes</h3><span>Live schedule</span></div><div class="tablewrap"><table><thead><tr><th>Class</th><th>Coach</th><th>Time</th><th>Capacity</th><th>Status</th></tr></thead><tbody id="classRows"></tbody></table></div></div></div>
+</section>
+</main>
+
+<div class="modal" id="workoutModal" hidden><div class="modalbox"><button class="close">×</button><div id="modalContent"></div></div></div>
+<div class="toast" id="toast"></div>
+<footer><div class="brand footerbrand"><span class="mark">P</span><span>PULSE<small>FITNESS CLUB</small></span></div><p>Stronger every session.</p><span>© 2026 PULSE Fitness</span></footer>
+<script src="app.js"></script>
+</body></html>
